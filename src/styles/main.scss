@@ -1,5 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: lightblue;
+  background-color: lightgray;
+}
+
+img {
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+}
+
+.hide {
+  display: none;
 }
