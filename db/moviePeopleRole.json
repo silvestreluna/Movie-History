@@ -1,0 +1,26 @@
+{
+  "moviePeople1": {
+    "id": "mp1",
+    "peopleId": "act1",
+    "movieId": "movie1",
+    "roleId": "role1"
+  },
+  "moviePeople2": {
+    "id": "mp2",
+    "peopleId": "act2",
+    "movieId": "movie1",
+    "roleId": "role1"
+  },
+  "moviePeople3": {
+    "id": "mp3",
+    "peopleId": "act3",
+    "movieId": "movie1",
+    "roleId": "role1"
+  },
+  "moviePeople4": {
+    "id": "mp4",
+    "peopleId": "act4",
+    "movieId": "movie1",
+    "roleId": "role1"
+  }
+}

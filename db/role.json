@@ -1,0 +1,10 @@
+{
+  "role1": {
+    "id": "role1",
+    "type": "Actor"
+  },
+  "role2": {
+    "id": "role2",
+    "type": "Director"
+  }
+}
