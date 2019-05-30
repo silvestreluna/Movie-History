@@ -1,0 +1,34 @@
+{
+  "user1": {
+    "uid": "123",
+    "movieId": "movie1",
+    "stars": "1",
+    "isWatched": true,
+    "fName": "Josh",
+    "lName": "Pontanta"
+  },
+  "user2": {
+    "uid": "wS19Qz8VenS0QoUogRzJkLG5kOv1",
+    "movieId": "movie1",
+    "stars": "2",
+    "isWatched": false,
+    "fName": "Silvestre",
+    "lName": "Luna"
+  },
+  "user3": {
+    "uid": "1232",
+    "movieId": "movie3",
+    "stars": "1",
+    "isWatched": true,
+    "fName": "Saul",
+    "lName": "Doe"
+  },
+  "user4": {
+    "uid": "34343",
+    "movieId": "movie4",
+    "stars": "3",
+    "isWatched": false,
+    "fName": "Mary",
+    "lName": "West"
+  }
+}

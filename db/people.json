@@ -1,0 +1,18 @@
+{
+  "people1": {
+    "mpId": "act1",
+    "name": "Keanu Reeves"
+  },
+  "people2": {
+    "mpId": "act2",
+    "name": "Lightning McQueen"
+  },
+  "people3": {
+    "mpId": "act3",
+    "name": "Fred Gwynne"
+  },
+  "people4": {
+    "mpId": "act4",
+    "name": "Matthew McConaughey"
+  }
+}
