@@ -10,7 +10,7 @@ const signMeIn = () => {
 };
 
 const authStringBuilder = () => {
-  const domString = `<img id="google-auth" src=${googleButton} />`;
+  const domString = `<img id="google-auth" class="auth-img" src=${googleButton} />`;
   util.printToDom('movie-auth', domString);
   document.getElementById('google-auth').addEventListener('click', signMeIn);
   document.getElementById('navbar-button-auth').addEventListener('click', signMeIn);

@@ -12,7 +12,7 @@ const init = () => {
   authData.checkLoginStatus();
   navEvents.navBarEvents();
   auth.authStringBuilder();
-  movies.printAllMovie();
+  movies.initMoviesData();
 };
 
 init();
