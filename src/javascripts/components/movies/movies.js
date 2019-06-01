@@ -3,10 +3,10 @@ import movies from '../../helpers/data/moviesData';
 
 
 const printAllMovie = (array) => {
-  let domString = '<p class="display-4">Movies</p>';
+  let domString = '<p class="movie-page-name">Movies</p>';
   domString += '<div class="cards-container">';
   array.forEach((movie) => {
-    domString += '<div class="each-card">';
+    domString += `<div id=${movie.id} class="each-card">`;
     domString += `<img class="movie-image" src=${movie.imgUrl}>`;
     domString += `<h3>${movie.title}</h3>`;
     domString += '<div class="gen-N-rating">';
@@ -14,6 +14,18 @@ const printAllMovie = (array) => {
     domString += `<div class="rating">${movie.MovieRating}</div>`;
     domString += `  ${movie.genre}`;
     domString += '</span>';
+    domString += '<div class="w-list-btn">';
+    domString += '<p class="w-list-text">+ Add to Watchlist</p>';
+    domString += '</div>';
+    domString += '<div class="movie-stars">';
+    domString += '<p>';
+    domString += '<i id="star1" class="star"></i>';
+    domString += '<i id="star2" class="star"></i>';
+    domString += '<i id="star3" class="star"></i>';
+    domString += '<i id="star4" class="star"></i>';
+    domString += '<i id="star5" class="star"></i>';
+    domString += '</p>';
+    domString += '</div>';
     domString += '</div>';
     domString += '</div>';
   });
@@ -24,8 +36,8 @@ const printAllMovie = (array) => {
 const initMoviesData = () => {
   movies.getMoviesData()
     .then((movie) => {
+      console.error(movie);
       printAllMovie(movie);
-      console.error('hello', movie);
     })
     .catch(err => console.error('could not get movies', err));
 };
