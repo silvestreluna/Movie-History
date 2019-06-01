@@ -3,7 +3,7 @@ import movies from '../../helpers/data/moviesData';
 
 
 const printAllMovie = (array) => {
-  let domString = '<p class="movie-page-name">Movies</p>';
+  let domString = '<p class="movie-page-name mb-5">Movies</p>';
   domString += '<div class="cards-container">';
   array.forEach((movie) => {
     domString += `<div id=${movie.id} class="each-card">`;

@@ -7,7 +7,6 @@ const logoutNavbar = document.getElementById('navbar-button-logout');
 const movies = document.getElementById('all-movies');
 const navMovies = document.getElementById('navbar-button-movies');
 
-
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
