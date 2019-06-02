@@ -4,6 +4,7 @@ import movies from '../../helpers/data/moviesData';
 
 const printAllMovie = (array) => {
   let domString = '<p class="movie-page-name mb-5">Movies</p>';
+  domString += '<button id="addNewMovieButton" type="button" class="btn btn-primary mb-5" data-toggle="button" aria-pressed="false" autocomplete="off"> + Add a New Movie</button>';
   domString += '<div class="cards-container">';
   array.forEach((movie) => {
     domString += `<div id=${movie.id} class="each-card">`;

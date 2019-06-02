@@ -25,17 +25,26 @@
             <a id="navbar-button-logout" class="nav-link hide">Logout</a>
           </li>
           <li class="nav-item">
-              <a id="navbar-button-movies" class="nav-link">Movies</a>
-            </li>
+            <a id="navbar-button-movies" class="nav-link">Movies</a>
+          </li>
         </ul>
       </div>
     </nav>
   </div>
   <div id="movie-auth" class="text-center"></div>
-  <div>
-    <button id="add-Movie-btn" type="button" class="btn btn-primary m-3" data-toggle="button" aria-pressed="false" autocomplete="off">Add a New Movie</button>
+  <div id="createNewMovie" class="hide add-new-movie">
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Enter Movie Information: </label>
+        <input type="text" class="form-control" id="title" placeholder="Title">
+        <input type="text" class="form-control" id="rating" placeholder="Ex PG-13">
+        <input type="text" class="form-control" id="imgUrl" placeholder="Enter movie image URL">
+        <input type="text" class="form-control" id="genre" placeholder="Enter Movie Genre">
+        <input type="text" class="form-control" id="star" placeholder="Rate Movie">
+      </div>
+      <button id="createMovie" type="button" class="btn btn-primary">Add Movie</button>
+    </form>
   </div>
-  <div id="createNewMovie" class="add-new-movie"></div>
   <div id="all-movies" class="hide text-center"></div>
 
 </body>

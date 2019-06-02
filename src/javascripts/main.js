@@ -6,7 +6,6 @@ import authData from './helpers/data/authData';
 import navEvents from './components/myNavBar/myNavBar';
 import movies from './components/movies/movies';
 import btnEvent from './components/movies/newMovies';
-
 import '../styles/main.scss';
 
 const init = () => {

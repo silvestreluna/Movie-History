@@ -1,24 +1,36 @@
-import util from '../../helpers/util';
+import $ from 'jquery';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import movieData from '../../helpers/data/moviesData';
 
-const newFormBuilder = () => {
-  let domstring = '<form>';
-  domstring += '<div class="form-group">';
-  domstring += '<label for="formGroupExampleInput">Enter Movie Information: </label>';
-  domstring += '<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title">';
-  domstring += '<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex PG-13">';
-  domstring += '<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter movie image URL">';
-  domstring += '<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Movie Genre">';
-  domstring += '<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Rate Movie">';
-  domstring += '</div>';
-  domstring += '  <button id="createMovie" type="submit" class="btn btn-primary">Add Movie</button>';
-  domstring += '</form>';
-  util.printToDom('createNewMovie', domstring);
+
+const showNewMovieForm = () => {
+  document.getElementById('createNewMovie').classList.remove('hide');
 };
 
+const addNewMovie = () => {
+  const newMovie = {
+    title: document.getElementById('title').value,
+    MovieRating: document.getElementById('rating').value,
+    imgUrl: document.getElementById('imgUrl').value,
+    genre: document.getElementById('genre').value,
+    stars: document.getElementById('star').value,
+    id: firebase.auth().currentUser.uid,
+  };
+  movieData.addNewMovie(newMovie)
+    .then(() => {
+      document.getElementById('title').value = '';
+      document.getElementById('rating').value = '';
+      document.getElementById('imgUrl').value = '';
+      document.getElementById('genre').value = '';
+      document.getElementById('star').value = '';
+    })
+    .catch(err => console.error('No new Movie', err));
+};
 
 const addEvent = () => {
-  const btn = document.getElementById('add-Movie-btn');
-  btn.addEventListener('click', newFormBuilder);
+  $(document).on('click', '#addNewMovieButton', showNewMovieForm);
+  $(document).on('click', '#createMovie', addNewMovie);
 };
 
 export default { addEvent };
