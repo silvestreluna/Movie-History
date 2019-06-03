@@ -7,8 +7,12 @@ const getMoviesData = () => new Promise((resolve, reject) => {
   axios.get(`${firebaseUrl}/movies.json`)
     .then((results) => {
       const movieResults = results.data;
-      const newMoviesValues = Object.values(movieResults);
-      resolve(newMoviesValues);
+      const movies = [];
+      Object.keys(movieResults).forEach((movieId) => {
+        movieResults[movieId].id = movieId;
+        movies.push(movieResults[movieId]);
+      });
+      resolve(movies);
     })
     .catch(err => reject(err));
 });

@@ -11,6 +11,7 @@ body {
 }
 
 .auth-img {
+  cursor: pointer;
   padding: 20px;
   border-radius: 20px;
   display: inline-block;
@@ -18,18 +19,26 @@ body {
 }
 
 .cards-container {
+  background-color: ghostwhite;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 15px;
 }
 
 .each-card {
-  margin: 10px;
   background-color: ghostwhite;
+  width: 243px;
+  padding-top: 20px;
 }
 
-.image-movie {
-  padding-top: 0 !important;
+#movieImg {
+  width: 150px;
+  min-height: 220px;
+}
+
+#movieImg:hover {
+  transform: scale(1.5);
 }
 
 .hide {
@@ -50,6 +59,7 @@ body {
 }
 
 .w-list-btn {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   margin-top: 5px;
@@ -68,7 +78,49 @@ body {
   font-weight: 100;
 }
 
+.added-to-watchList{
+  margin: 1px;
+  font-weight: 100;
+}
+
+#addedWLBtn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  background-color: green;
+  color: snow;
+
+  border-radius: 50px;
+  box-shadow: 3px 3px 13px 2px rgba(0,0,0,0.44);
+}
+
+#movie-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0rem;
+}
+
+#movie-title:hover {
+  transform: scale(1.5);
+  font-style: bold;
+}
+
+.add-new-movie {
+  color: white;
+  margin: 50px;
+}
+
+#addNewMovieButton {
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .star {
+  cursor: pointer;
   position: relative;
   
   display: inline-block;
@@ -84,7 +136,7 @@ body {
   border-left:   .3em solid transparent;
 
   /* Controlls the size of the stars. */
-  font-size: 12px;
+  font-size: 10px;
   
   &:before, &:after {
     content: '';
@@ -109,12 +161,52 @@ body {
   }
 }
 
-.add-new-movie {
-  color: white;
-  margin: 50px;
+.star:hover {
+  transform: scale(1.5);
 }
 
-#addNewMovieButton {
-  font-size: 18px;
-  font-weight: 500;
+.gray {
+  cursor: pointer;
+  position: relative;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #616161;
+  border-left:   .3em solid transparent;
+
+  /* Controlls the size of the stars. */
+  font-size: 10px;
+  
+  &:before, &:after {
+    content: '';
+    
+    display: block;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: .6em;
+    left: -1em;
+  
+    border-right:  1em solid transparent;
+    border-bottom: .7em  solid #616161;
+    border-left:   1em solid transparent;
+  
+    transform: rotate(-35deg);
+  }
+  
+  &:after {  
+    transform: rotate(35deg);
+  }
+}
+
+.gray:hover {
+  transform: scale(1.5);
 }
