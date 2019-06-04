@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import firebase from 'firebase/app';
+// import firebase from 'firebase/app';
 import 'firebase/auth';
 import movieData from '../../helpers/data/moviesData';
 import movies from './movies';
@@ -30,7 +30,7 @@ const addNewMovie = () => {
       imgUrl: movieURL.value,
       genre: movieGenre.value,
       stars: movieStar.value,
-      id: firebase.auth().currentUser.uid,
+      // id: firebase.auth().currentUser.uid // I don't need this.
     };
 
     document.getElementById('createNewMovie').classList.add('hide');

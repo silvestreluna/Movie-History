@@ -2,7 +2,6 @@
   "user1": {
     "uid": "123",
     "movieId": "movie1",
-    "isWatched": true,
     "fName": "Josh",
     "lName": "Pontanta"
   },
@@ -10,20 +9,17 @@
     "uid": "wS19Qz8VenS0QoUogRzJkLG5kOv1",
     "movieId": "movie1",
     "isWatched": false,
-    "fName": "Silvestre",
     "lName": "Luna"
   },
   "user3": {
     "uid": "1232",
     "movieId": "movie3",
-    "isWatched": true,
     "fName": "Saul",
     "lName": "Doe"
   },
   "user4": {
     "uid": "34343",
     "movieId": "movie4",
-    "isWatched": false,
     "fName": "Mary",
     "lName": "West"
   }

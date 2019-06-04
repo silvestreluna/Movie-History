@@ -1,21 +1,23 @@
 import $ from 'jquery';
 
 const addMovieToWatchList = (e) => {
-  const watchListBtn = e.target.id;
-  console.error('wl.....', watchListBtn, '....divId');
-  if (watchListBtn.checked === true) {
-    document.getElementById('addToWatch').classList.add('d-none');
-    document.getElementById('addedWLBtn').classList.remove('d-none');
+  const currentId = e.target.id;
+  const btnDiv = document.getElementById(`${currentId}.btn`).id;
+  const pTagText = document.getElementById(currentId).innerText;
+  console.error(btnDiv);
+  if (pTagText === '+ Add to Watchlist') {
+    document.getElementById(currentId).innerHTML = 'Added to Watchlist';
+    document.getElementById(`${currentId}.btn`).classList.replace('notWatchListBtn', 'addedWatchListBtn');
   } else {
-    document.getElementById('addToWatch').classList.remove('d-none');
-    document.getElementById('addedWLBtn').classList.add('d-none');
+    document.getElementById(currentId).innerHTML = '+ Add to Watchlist';
+    document.getElementById(`${currentId}.btn`).classList.replace('addedWatchListBtn', 'notWatchListBtn');
   }
 };
 
 
 const watchListEvent = () => {
-  $(document).on('click', '.w-list-text', addMovieToWatchList);
-  $(document).on('click', '.added-to-watchList', addMovieToWatchList);
+  $(document).on('click', '.notWatchListBtn', addMovieToWatchList);
+  $(document).on('click', '.addedWatchListBtn', addMovieToWatchList);
 };
 
 
