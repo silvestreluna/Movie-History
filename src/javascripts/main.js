@@ -7,6 +7,7 @@ import navEvents from './components/myNavBar/myNavBar';
 import movies from './components/movies/movies';
 import btnEvent from './components/movies/newMovies';
 import wlistEvent from './components/movies/moviewatchlist';
+import starsEvent from './components/movies/movieStars';
 import '../styles/main.scss';
 
 const init = () => {
@@ -17,6 +18,7 @@ const init = () => {
   movies.initMoviesData();
   btnEvent.addEvent();
   wlistEvent.watchListEvent();
+  starsEvent.starsEvent();
 };
 
 init();

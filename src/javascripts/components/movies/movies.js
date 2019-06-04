@@ -15,8 +15,7 @@ const printAllMovie = (array) => {
     domString += `  ${movie.genre}`;
     domString += '</span>';
     const currentIsWatched = `${movie.isWatched}`;
-    console.error(currentIsWatched);
-    if (currentIsWatched === 'false') {
+    if (currentIsWatched === 'false' || currentIsWatched === 'undefined') {
       domString += `<div id=${movie.id}.btn class="notWatchListBtn">`;
       domString += `<p  id="${movie.id}" class="notWatchListText">+ Add to Watchlist</p>`;
       domString += '</div>';
@@ -29,35 +28,35 @@ const printAllMovie = (array) => {
     domString += '<p>';
     const stars = `${movie.stars}`;
     if (stars <= 1) {
-      domString += '<i id="star1" class="star"></i>';
-      domString += '<i id="star2" class="gray"></i>';
-      domString += '<i id="star3" class="gray"></i>';
-      domString += '<i id="star4" class="gray"></i>';
-      domString += '<i id="star5" class="gray"></i>';
+      domString += `<i id="star_1.${movie.id}" class="star one"></i>`;
+      domString += `<i id="star_2.${movie.id}" class="gray two"></i>`;
+      domString += `<i id="star_3.${movie.id}" class="gray three"></i>`;
+      domString += `<i id="star_4.${movie.id}" class="gray four"></i>`;
+      domString += `<i id="star_5.${movie.id}" class="gray five"></i>`;
     } else if (stars <= 2) {
-      domString += '<i id="star1" class="star"></i>';
-      domString += '<i id="star2" class="star"></i>';
-      domString += '<i id="star3" class="gray"></i>';
-      domString += '<i id="star4" class="gray"></i>';
-      domString += '<i id="star5" class="gray"></i>';
+      domString += `<i id="star_1.${movie.id}" class="star one"></i>`;
+      domString += `<i id="star_2.${movie.id}" class="star two"></i>`;
+      domString += `<i id="star_3.${movie.id}" class="gray three"></i>`;
+      domString += `<i id="star_4.${movie.id}" class="gray four"></i>`;
+      domString += `<i id="star_5.${movie.id}" class="gray five"></i>`;
     } else if (stars <= 3) {
-      domString += '<i id="star1" class="star"></i>';
-      domString += '<i id="star2" class="star"></i>';
-      domString += '<i id="star3" class="star"></i>';
-      domString += '<i id="star4" class="gray"></i>';
-      domString += '<i id="star5" class="gray"></i>';
+      domString += `<i id="star_1.${movie.id}" class="star one"></i>`;
+      domString += `<i id="star_2.${movie.id}" class="star two"></i>`;
+      domString += `<i id="star_3.${movie.id}" class="star three"></i>`;
+      domString += `<i id="star_4.${movie.id}" class="gray four"></i>`;
+      domString += `<i id="star_5.${movie.id}" class="gray five"></i>`;
     } else if (stars <= 4) {
-      domString += '<i id="star1" class="star"></i>';
-      domString += '<i id="star2" class="star"></i>';
-      domString += '<i id="star3" class="star"></i>';
-      domString += '<i id="star4" class="star"></i>';
-      domString += '<i id="star5" class="gray"></i>';
+      domString += `<i id="star_1.${movie.id}" class="star one"></i>`;
+      domString += `<i id="star_2.${movie.id}" class="star two"></i>`;
+      domString += `<i id="star_3.${movie.id}" class="star three"></i>`;
+      domString += `<i id="star_4.${movie.id}" class="star four"></i>`;
+      domString += `<i id="star_5.${movie.id}" class="gray five"></i>`;
     } else if (stars >= 5) {
-      domString += '<i id="star1" class="star"></i>';
-      domString += '<i id="star2" class="star"></i>';
-      domString += '<i id="star3" class="star"></i>';
-      domString += '<i id="star4" class="star"></i>';
-      domString += '<i id="star5" class="star"></i>';
+      domString += `<i id="star_1.${movie.id}" class="star one"></i>`;
+      domString += `<i id="star_2.${movie.id}" class="star two"></i>`;
+      domString += `<i id="star_3.${movie.id}" class="star three"></i>`;
+      domString += `<i id="star_4.${movie.id}" class="star four"></i>`;
+      domString += `<i id="star_5.${movie.id}" class="star five"></i>`;
     }
     domString += '</p>';
     domString += '</div>';
