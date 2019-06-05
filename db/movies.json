@@ -4,6 +4,8 @@
     "MovieRating": "PG-13",
     "imgUrl": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/icmmSD4vTTDKOq2vvdulafOGw93.jpg",
     "genre": "Science Fiction",
+    "stars": "2",
+    "isWatched": true,
     "id": "movie1"
   },
   "movie2": {
@@ -11,6 +13,8 @@
     "MovieRating": "G",
     "imgUrl": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg",
     "genre": "Family",
+    "stars": "1",
+    "isWatched": false,
     "id": "movie2"
 
   },
@@ -19,6 +23,8 @@
     "MovieRating": "R",
     "imgUrl": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/n2aX63BmW7zIKgKJ58e6rKlSsdi.jpg",
     "genre": "Horror",
+    "stars": "5",
+    "isWatched": false,
     "id": "movie3"
   },
   "movie4": {
@@ -26,6 +32,8 @@
     "MovieRating": "PG-13",
     "imgUrl": "https://image.tmdb.org/t/p/w300_and_h450_bestv2/xu9zaAevzQ5nnrsXN6JcahLnG4i.jpg",
     "genre": "Science Fiction",
+    "stars": "3",
+    "isWatched": true,
     "id": "movie4"
   }
 }
