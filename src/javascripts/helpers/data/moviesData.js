@@ -19,6 +19,12 @@ const getMoviesData = () => new Promise((resolve, reject) => {
 
 const addNewMovie = newMovieObj => axios.post(`${firebaseUrl}/movies.json`, newMovieObj);
 const editMovie = (movieId, updatedMovie) => axios.patch(`${firebaseUrl}/movies/${movieId}.json`, updatedMovie);
+const editStars = (movieId, updatedStarValue) => axios.patch(`${firebaseUrl}/movies/${movieId}.json`, updatedStarValue);
 
 
-export default { getMoviesData, addNewMovie, editMovie };
+export default {
+  getMoviesData,
+  addNewMovie,
+  editMovie,
+  editStars,
+};
