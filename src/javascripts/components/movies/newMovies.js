@@ -14,7 +14,8 @@ const closeNewMovieWindow = () => {
   document.getElementById('addNewMovieButton').classList.remove('hide');
 };
 
-const addNewMovie = () => {
+const addNewMovie = (e) => {
+  e.preventDefault();
   const titleValue = document.getElementById('title');
   const movieRating = document.getElementById('rating');
   const movieURL = document.getElementById('imgUrl');

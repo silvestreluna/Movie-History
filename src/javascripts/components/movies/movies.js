@@ -14,7 +14,9 @@ const printAllMovie = (array) => {
     domString += `<div class="rating">${movie.MovieRating}</div>`;
     domString += `  ${movie.genre}`;
     domString += '</span>';
+
     const currentIsWatched = `${movie.isWatched}`;
+
     if (currentIsWatched === 'false' || currentIsWatched === 'undefined') {
       domString += `<div id=${movie.id}.btn class="notWatchListBtn">`;
       domString += `<p  id="${movie.id}" class="notWatchListText">+ Add to Watchlist</p>`;
@@ -25,7 +27,7 @@ const printAllMovie = (array) => {
       domString += '</div>';
     }
     domString += '<div class="movie-stars">';
-    domString += '<p>';
+    domString += '<p class="pForStars">';
     const stars = `${movie.stars}`;
     if (stars <= 1) {
       domString += `<i id="star_1.${movie.id}" class="star one"></i>`;
@@ -60,6 +62,10 @@ const printAllMovie = (array) => {
     }
     domString += '</p>';
     domString += '</div>';
+    domString += '<div class="mt-0 mb-2">';
+    domString += '<img class="editMovie mt-0 mr-1 mb-3" src="https://cdn4.iconfinder.com/data/icons/design-4/100/14-512.png" />';
+    domString += '<img id="trashMovie" class="mt-0 ml-0 mb-3" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/699013-icon-27-trash-can-256.png"/>';
+    domString += '</div>';
     domString += '</div>';
     domString += '</div>';
   });
@@ -70,7 +76,6 @@ const printAllMovie = (array) => {
 const initMoviesData = () => {
   movies.getMoviesData()
     .then((movie) => {
-      console.error(movie);
       printAllMovie(movie);
     })
     .catch(err => console.error('could not get movies', err));
