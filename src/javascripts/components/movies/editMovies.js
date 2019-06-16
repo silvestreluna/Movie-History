@@ -2,13 +2,14 @@ import $ from 'jquery';
 import util from '../../helpers/util';
 
 const editMovies = (e) => {
-  // document.getElementById('all-movies').classList.add('hide');
-  // document.getElementById('movieFormEditing').classList.remove('hide');
+  document.getElementById('all-movies').classList.add('hide');
+  document.getElementById('movieFormEditing').classList.remove('hide');
   const currentId = e.target.closest('.each-card').id;
   const onlyCardId = currentId.split('.')[1];
   console.error(onlyCardId);
 
   const editItemString = `
+
   <h3 class="movie-page-name mb-5">Updating Movie...</h3>
   <form>
   <div class="form-group">
@@ -29,7 +30,7 @@ const editMovies = (e) => {
 
 const updateMovieButton = () => {
   document.getElementById('all-movies').classList.remove('hide');
-  // document.getElementById('movieFormEditing').classList.add('hide');
+  document.getElementById('movieFormEditing').classList.remove('hide');
 };
 
 const cancelBtn = () => {
