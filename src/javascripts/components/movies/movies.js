@@ -7,12 +7,12 @@ const printAllMovie = (array) => {
   domString += '<div class="cards-container">';
   array.forEach((movie) => {
     domString += `<div id=card.${movie.id} class="each-card">`;
-    domString += `<img id="movieImg" class="movie-image" src=${movie.imgUrl} />`;
-    domString += `<p id="movie-title">${movie.title}</p>`;
+    domString += `<img id="movieImg.${movie.id}" class="movie-image movieImg" src=${movie.imgUrl} />`;
+    domString += `<p id="movie-title.${movie.id}">${movie.title}</p>`;
     domString += '<div class="gen-N-rating">';
     domString += '<span>';
-    domString += `<div class="rating">${movie.MovieRating}</div>`;
-    domString += `  ${movie.genre}`;
+    domString += `<div id="rating.${movie.id}" class="rating">${movie.MovieRating}</div>`;
+    domString += `<section id="genre.${movie.id}">${movie.genre}</section>`;
     domString += '</span>';
 
     const currentIsWatched = `${movie.isWatched}`;

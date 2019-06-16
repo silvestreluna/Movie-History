@@ -16,6 +16,7 @@ const closeNewMovieWindow = () => {
 
 const addNewMovie = (e) => {
   e.preventDefault();
+  $('body').scrollTop(0);
   const titleValue = document.getElementById('title');
   const movieRating = document.getElementById('rating');
   const movieURL = document.getElementById('imgUrl');
