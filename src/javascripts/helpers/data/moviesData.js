@@ -18,7 +18,11 @@ const getMoviesData = () => new Promise((resolve, reject) => {
 });
 
 const addNewMovie = newMovieObj => axios.post(`${firebaseUrl}/movies.json`, newMovieObj);
+
+const deleteMovie = movieIdToDelete => axios.delete(`${firebaseUrl}/movies/${movieIdToDelete}.json`);
+
 const editMovie = (movieId, updatedMovie) => axios.patch(`${firebaseUrl}/movies/${movieId}.json`, updatedMovie);
+
 const editStars = (movieId, updatedStarValue) => axios.patch(`${firebaseUrl}/movies/${movieId}.json`, updatedStarValue);
 
 
@@ -27,4 +31,5 @@ export default {
   addNewMovie,
   editMovie,
   editStars,
+  deleteMovie,
 };

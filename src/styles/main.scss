@@ -32,12 +32,12 @@ body {
   padding-top: 20px;
 }
 
-#movieImg {
+.movieImg {
   width: 150px;
-  min-height: 220px;
+  height: 220px;
 }
 
-#movieImg:hover {
+.movieImg:hover {
   transform: scale(1.5);
 }
 
@@ -52,7 +52,6 @@ body {
   display: inline-block;
   font-size: 11px;
   line-height: 11px;
-  margin: 5px 5px 10px 0;
   max-height: 14px;
   padding: 1px 3px 0;
   transform: translateY(-1px);
@@ -210,3 +209,34 @@ body {
 .gray:hover {
   transform: scale(1.5);
 }
+
+.pForStars {
+  margin-bottom: 0;
+}
+
+.editMovie {
+  width: 30px;
+  opacity: 0;
+}
+
+.editMovie:hover {
+  opacity: 1;
+}
+
+#trashMovie {
+  width: 30px;
+  opacity: 0;
+}
+
+#trashMovie:hover {
+  opacity: 1;
+}
+
+#movieFormEditing {
+  text-align: center;
+  margin: 100px;
+}
+ P {
+  margin-top: 0;
+  margin-bottom: 0;
+ }
