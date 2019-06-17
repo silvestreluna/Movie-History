@@ -1,7 +1,9 @@
 # Movie-History
 A web page where users can keep track of movies they have watched or want to watch. Users have multiple features such as adding, editing, rating movies and an option to add to a watchlist for later.
 
-// Add Img
+![Home page](https://raw.githubusercontent.com/silvestreluna/Sandwich-Maker/master/img/Smaker.png)
+![Add New Movie Screen](https://raw.githubusercontent.com/silvestreluna/Sandwich-Maker/master/img/Smaker.png)
+![Edit Movie Screen](https://raw.githubusercontent.com/silvestreluna/Sandwich-Maker/master/img/Smaker.png)
 
 ## Technologies Used
 - HTML, SCSS, and JavaScript
