@@ -1,5 +1,6 @@
 # Movie-History
 A web page where users can keep track of movies they have watched or want to watch. Users have multiple features such as adding, editing, rating movies and an option to add to a watchlist for later.
+https://movie-history-b6c25.firebaseapp.com
 
 ![Home page](https://raw.githubusercontent.com/silvestreluna/Movie-History/master/assets/home.png)
 ![Add New Movie Screen](https://raw.githubusercontent.com/silvestreluna/Movie-History/master/assets/addScreen.png)
