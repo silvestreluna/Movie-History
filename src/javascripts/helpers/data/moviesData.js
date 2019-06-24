@@ -8,10 +8,12 @@ const getMoviesData = () => new Promise((resolve, reject) => {
     .then((results) => {
       const movieResults = results.data;
       const movies = [];
-      Object.keys(movieResults).forEach((movieId) => {
-        movieResults[movieId].id = movieId;
-        movies.push(movieResults[movieId]);
-      });
+      if (movieResults !== null) {
+        Object.keys(movieResults).forEach((movieId) => {
+          movieResults[movieId].id = movieId;
+          movies.push(movieResults[movieId]);
+        });
+      }
       resolve(movies);
     })
     .catch(err => reject(err));
